@@ -32,7 +32,7 @@ function HeroSection() {
           <FactoryIcon className="mx-auto" />
         </div>
 
-        <h1 className={`transition-all duration-700 delay-200 ${loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ fontFamily: "var(--font-dela-gothic)" }}>
+        <h1 className={`transition-all duration-700 delay-200 ${loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`} style={{ fontFamily: "var(--font-kiwi-maru)" }}>
           <span className="block text-base md:text-lg text-factory-orange font-bold tracking-widest mb-4 uppercase">
             あったらいいなが自分で作れる！
           </span>
@@ -98,7 +98,7 @@ function WhatSection() {
     <section id="what" ref={ref} className="relative py-24 md:py-32 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className={`text-center transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             こんなこと、思ったこと<br /><span className="text-factory-pink">ありませんか？</span>
           </h2>
         </div>
@@ -112,7 +112,7 @@ function WhatSection() {
         </div>
         <div className={`mt-20 text-center transition-all duration-700 delay-500 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="inline-block bg-factory-yellow px-10 py-6 rounded-2xl neu-border neu-shadow animate-wiggle">
-            <p className="text-2xl md:text-3xl font-bold" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+            <p className="text-2xl md:text-3xl font-bold" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
               それ、全部<span className="text-factory-coral">自分で</span>作れます。
             </p>
           </div>
@@ -138,7 +138,7 @@ function HowSection() {
           <span className="inline-block bg-factory-dark text-factory-yellow px-5 py-2 rounded-full text-sm font-bold mb-5 neu-border border-factory-dark -rotate-1">
             かんたん3ステップ
           </span>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             作り方は<span className="text-factory-orange">びっくりするほど</span><br />シンプル
           </h2>
         </div>
@@ -148,8 +148,8 @@ function HowSection() {
               {i < 2 && <div className="hidden md:flex absolute top-1/2 -right-5 z-10 -translate-y-1/2"><ArrowRight /></div>}
               <div className={`${step.color} p-8 rounded-3xl neu-border neu-shadow text-center h-full`}>
                 <div className="mx-auto w-16 h-16 flex items-center justify-center mb-5">{step.icon}</div>
-                <div className="text-5xl font-black text-factory-dark/15 mb-2" style={{ fontFamily: "var(--font-dela-gothic)" }}>{step.num}</div>
-                <h3 className="text-2xl mb-3" style={{ fontFamily: "var(--font-dela-gothic)" }}>{step.title}</h3>
+                <div className="text-5xl font-black text-factory-dark/15 mb-2" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{step.num}</div>
+                <h3 className="text-2xl mb-3" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{step.title}</h3>
                 <p className="text-base leading-relaxed font-medium text-factory-dark/80">{step.desc}</p>
               </div>
             </div>
@@ -176,7 +176,7 @@ function ExamplesSection() {
       <div className="absolute top-0 left-0 w-full h-5 pattern-diagonal opacity-50" />
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             たとえば、こんなものが<br />
             <span className="relative inline-block mt-2">
               <span className="relative z-10">作れちゃう</span>
@@ -192,7 +192,7 @@ function ExamplesSection() {
                 {ex.icon}
                 <span className={`${ex.tagBg} text-white text-xs font-bold px-3 py-1.5 rounded-full neu-border`}>{ex.tag}</span>
               </div>
-              <h3 className="text-xl mb-2" style={{ fontFamily: "var(--font-dela-gothic)" }}>{ex.title}</h3>
+              <h3 className="text-xl mb-2" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{ex.title}</h3>
               <p className="text-sm leading-relaxed text-factory-dark/70">{ex.desc}</p>
             </div>
           ))}
@@ -217,7 +217,7 @@ function WhyNowSection() {
       <div className="absolute bottom-10 left-10 opacity-[0.07]"><GearIcon size={100} color="white" className="animate-spin-slow-reverse" /></div>
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className={`text-center transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             なぜ<span className="text-factory-yellow">今</span>なのか
           </h2>
         </div>
@@ -225,8 +225,8 @@ function WhyNowSection() {
           {reasons.map((item, i) => (
             <div key={i} className={`${item.color} text-factory-dark p-7 rounded-2xl neu-border neu-shadow-sm card-hover ${visible ? "animate-pop-in" : "opacity-0"}`} style={{ animationDelay: `${0.3 + i * 0.12}s` }}>
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl font-black opacity-20" style={{ fontFamily: "var(--font-dela-gothic)" }}>0{i + 1}</span>
-                <h3 className="text-lg font-bold" style={{ fontFamily: "var(--font-dela-gothic)" }}>{item.title}</h3>
+                <span className="text-3xl font-black opacity-20" style={{ fontFamily: "var(--font-kiwi-maru)" }}>0{i + 1}</span>
+                <h3 className="text-lg font-bold" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{item.title}</h3>
               </div>
               <p className="text-factory-dark/80 leading-relaxed">{item.desc}</p>
             </div>
@@ -250,7 +250,7 @@ function VoicesSection() {
       <div className="absolute inset-0 pattern-dots" />
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             やってみた人の<span className="text-factory-coral">声</span>
           </h2>
         </div>
@@ -278,7 +278,7 @@ function CTASection() {
       <div className="max-w-3xl mx-auto text-center">
         <div className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
           <FactoryIcon className="mx-auto mb-8 animate-float" />
-          <h2 className="text-3xl md:text-5xl mb-6" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl mb-6" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             あなたの妄想、<br />
             <span className="relative inline-block mt-2">
               <span className="relative z-10 text-factory-coral">形にしませんか？</span>
@@ -293,7 +293,7 @@ function CTASection() {
           </p>
         </div>
         <div className={`flex flex-col sm:flex-row gap-5 justify-center items-center transition-all duration-700 delay-300 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-          <a href="#" className="neu-btn inline-flex items-center gap-3 bg-factory-coral text-white font-bold text-lg md:text-xl px-10 py-5 rounded-2xl">
+          <a href="/contact" className="neu-btn inline-flex items-center gap-3 bg-factory-coral text-white font-bold text-lg md:text-xl px-10 py-5 rounded-2xl">
             はじめてみる
             <ArrowRight />
           </a>

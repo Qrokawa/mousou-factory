@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zen_Maru_Gothic, Dela_Gothic_One } from "next/font/google";
+import { Zen_Maru_Gothic, Kiwi_Maru } from "next/font/google";
 import "./globals.css";
 
 const zenMaru = Zen_Maru_Gothic({
@@ -9,10 +9,10 @@ const zenMaru = Zen_Maru_Gothic({
   display: "swap",
 });
 
-const delaGothic = Dela_Gothic_One({
-  weight: "400",
+const kiwiMaru = Kiwi_Maru({
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
-  variable: "--font-dela-gothic",
+  variable: "--font-kiwi-maru",
   display: "swap",
 });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${zenMaru.variable} ${delaGothic.variable} antialiased`}
+        className={`${zenMaru.variable} ${kiwiMaru.variable} antialiased`}
         style={{ fontFamily: "var(--font-zen-maru), sans-serif" }}
       >
         {children}

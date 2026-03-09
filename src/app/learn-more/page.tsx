@@ -27,7 +27,7 @@ function PageHero() {
           <span className="inline-block bg-factory-pink text-white px-5 py-2 rounded-full text-sm font-bold mb-6 neu-border border-factory-dark -rotate-1">
             もっと詳しく知る
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl mb-6" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl mb-6" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             AIエージェントって、
             <br />
             <span className="text-factory-blue">結局なに？</span>
@@ -51,7 +51,7 @@ function WhatIsSection() {
     <section ref={ref} className="py-24 md:py-32 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             AIエージェントを<span className="text-factory-orange">知ろう</span>
           </h2>
         </div>
@@ -63,7 +63,7 @@ function WhatIsSection() {
               <ChatIcon />
               <span className="bg-factory-dark/10 text-factory-dark text-sm font-bold px-4 py-1.5 rounded-full">従来のAI</span>
             </div>
-            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
               質問すると答えが返ってくる
             </h3>
             <p className="text-factory-dark/70 leading-relaxed">
@@ -77,7 +77,7 @@ function WhatIsSection() {
               <ToolIcon />
               <span className="bg-factory-dark text-factory-yellow text-sm font-bold px-4 py-1.5 rounded-full">AIエージェント</span>
             </div>
-            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
               指示すると、実際に作業してくれる
             </h3>
             <p className="text-factory-dark/80 leading-relaxed">
@@ -148,7 +148,7 @@ function ProcessSection() {
       <div className="absolute inset-0 pattern-dots" />
       <div className="relative z-10 max-w-3xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             実際の作り方を
             <br />
             <span className="text-factory-blue">もう少し詳しく</span>
@@ -169,8 +169,8 @@ function ProcessSection() {
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl font-black text-factory-dark/20" style={{ fontFamily: "var(--font-dela-gothic)" }}>{step.num}</span>
-                      <h3 className="text-xl font-bold" style={{ fontFamily: "var(--font-dela-gothic)" }}>{step.title}</h3>
+                      <span className="text-2xl font-black text-factory-dark/20" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{step.num}</span>
+                      <h3 className="text-xl font-bold" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{step.title}</h3>
                     </div>
                     <p className="text-factory-dark/70 leading-relaxed">{step.desc}</p>
                   </div>
@@ -214,7 +214,7 @@ function ToolsSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             どんな<span className="text-factory-yellow">ツール</span>を使うの？
           </h2>
         </div>
@@ -226,7 +226,7 @@ function ToolsSection() {
               className={`${tool.color} text-factory-dark p-7 rounded-2xl neu-border neu-shadow-sm card-hover ${visible ? "animate-pop-in" : "opacity-0"}`}
               style={{ animationDelay: `${0.2 + i * 0.15}s` }}
             >
-              <h3 className="text-xl mb-4 font-bold" style={{ fontFamily: "var(--font-dela-gothic)" }}>{tool.name}</h3>
+              <h3 className="text-xl mb-4 font-bold" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{tool.name}</h3>
               <p className="text-factory-dark/80 leading-relaxed text-sm">{tool.desc}</p>
             </div>
           ))}
@@ -283,7 +283,7 @@ function CaseStudiesSection() {
     <section ref={ref} className="py-24 md:py-32 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             実際に作った人の<span className="text-factory-coral">ストーリー</span>
           </h2>
         </div>
@@ -297,7 +297,7 @@ function CaseStudiesSection() {
             >
               <div className="flex items-start gap-4 mb-6">
                 {c.icon}
-                <h3 className="text-xl md:text-2xl font-bold" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+                <h3 className="text-xl md:text-2xl font-bold" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
                   {c.title}
                 </h3>
               </div>
@@ -397,7 +397,7 @@ function FAQSection() {
       <div className="absolute inset-0 pattern-grid" />
       <div className="relative z-10 max-w-3xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             よくある<span className="text-factory-pink">質問</span>
           </h2>
         </div>
@@ -446,7 +446,7 @@ function ReassuranceSection() {
     <section ref={ref} className="py-24 md:py-32 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             一歩踏み出すのが
             <br />
             <span className="text-factory-coral">不安な方へ</span>
@@ -461,7 +461,7 @@ function ReassuranceSection() {
               style={{ animationDelay: `${0.2 + i * 0.15}s` }}
             >
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-dela-gothic)" }}>{item.title}</h3>
+              <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-kiwi-maru)" }}>{item.title}</h3>
               <p className="text-factory-dark/70 leading-relaxed text-sm">{item.desc}</p>
             </div>
           ))}
@@ -481,7 +481,7 @@ function CTASection() {
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <div className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
           <FactoryIcon className="mx-auto mb-8 animate-float" />
-          <h2 className="text-3xl md:text-5xl mb-6" style={{ fontFamily: "var(--font-dela-gothic)" }}>
+          <h2 className="text-3xl md:text-5xl mb-6" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
             さあ、最初の一歩を
             <br />
             <span className="relative inline-block mt-2">
@@ -499,7 +499,7 @@ function CTASection() {
         </div>
 
         <div className={`flex flex-col sm:flex-row gap-5 justify-center items-center transition-all duration-700 delay-300 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-          <a href="#" className="neu-btn inline-flex items-center gap-3 bg-factory-coral text-white font-bold text-lg md:text-xl px-10 py-5 rounded-2xl">
+          <a href="/contact" className="neu-btn inline-flex items-center gap-3 bg-factory-coral text-white font-bold text-lg md:text-xl px-10 py-5 rounded-2xl">
             無料で始める
             <ArrowRight />
           </a>
