@@ -257,8 +257,7 @@ export default function Contact() {
     <>
       <SiteHeader />
       <ContactHero />
-      <BenefitsSection />
-      <section className="py-16 md:py-20 px-4 bg-white">
+      <section className="py-10 md:py-14 px-4 bg-white">
         <div className="max-w-md mx-auto text-center">
           <button
             onClick={() => setChatStarted(true)}
@@ -269,6 +268,7 @@ export default function Contact() {
           </button>
         </div>
       </section>
+      <BenefitsSection />
       <Footer />
     </>
   );
