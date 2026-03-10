@@ -29,8 +29,13 @@ function ChatBot() {
   const [sessionId] = useState(generateSessionId);
   const bottomRef = useRef<HTMLDivElement>(null);
 
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }, [messages]);
 
   async function handleSend() {
@@ -67,9 +72,9 @@ function ChatBot() {
   }
 
   return (
-    <div className="bg-factory-cream rounded-3xl neu-border neu-shadow overflow-hidden">
+    <div className="flex flex-col h-[calc(100dvh-57px)] bg-factory-cream">
       {/* Header */}
-      <div className="bg-factory-dark px-6 py-4 flex items-center gap-3">
+      <div className="bg-factory-dark px-6 py-4 flex items-center gap-3 flex-shrink-0">
         <FactoryIcon className="w-8 h-8 [&>svg]{w-8 h-8}" />
         <div>
           <p className="text-factory-yellow font-bold text-sm" style={{ fontFamily: "var(--font-kiwi-maru)" }}>
@@ -84,7 +89,7 @@ function ChatBot() {
       </div>
 
       {/* Messages */}
-      <div className="h-[400px] overflow-y-auto p-4 md:p-6 space-y-4">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4">
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
@@ -112,11 +117,11 @@ function ChatBot() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
-      <div className="border-t-3 border-factory-dark p-4">
+      {/* Input - pinned to bottom */}
+      <div className="border-t-3 border-factory-dark p-4 flex-shrink-0 bg-factory-cream">
         <form
           onSubmit={(e) => { e.preventDefault(); handleSend(); }}
-          className="flex gap-3"
+          className="flex gap-3 max-w-2xl mx-auto"
         >
           <input
             type="text"
@@ -172,15 +177,12 @@ function ContactHero() {
   );
 }
 
-/* ─── Chat Section ─── */
+/* ─── Chat Section (full screen) ─── */
 
 function ChatSection() {
-  const { ref, visible } = useReveal();
   return (
-    <section ref={ref} className="py-8 md:py-16 px-4 bg-white">
-      <div className={`max-w-2xl mx-auto transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-        <ChatBot />
-      </div>
+    <section className="bg-white">
+      <ChatBot />
     </section>
   );
 }
@@ -240,12 +242,33 @@ function BenefitsSection() {
 /* ─── Page ─── */
 
 export default function Contact() {
+  const [chatStarted, setChatStarted] = useState(false);
+
+  if (chatStarted) {
+    return (
+      <>
+        <SiteHeader />
+        <ChatSection />
+      </>
+    );
+  }
+
   return (
     <>
       <SiteHeader />
       <ContactHero />
-      <ChatSection />
       <BenefitsSection />
+      <section className="py-16 md:py-20 px-4 bg-white">
+        <div className="max-w-md mx-auto text-center">
+          <button
+            onClick={() => setChatStarted(true)}
+            className="neu-btn inline-flex items-center gap-3 bg-factory-coral text-white font-bold text-lg md:text-xl px-10 py-5 rounded-2xl w-full justify-center"
+          >
+            チャットで相談する
+            <ArrowRight />
+          </button>
+        </div>
+      </section>
       <Footer />
     </>
   );
